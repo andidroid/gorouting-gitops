@@ -11,10 +11,10 @@ spec:
   policyTypes:
     {{ .Values.networkPolicy.policyTypes }}
   ingress:
-    {{if has ingress .Values.networkPolicy.policyTypes }}
+    {{if has "ingress" .Values.networkPolicy.policyTypes }}
       {{ .Values.networkPolicy.ingress }}
     {{ end }}
   egress:
-    {{if has egress .Values.networkPolicy.policyTypes }}
+    {{if has "egress" .Values.networkPolicy.policyTypes }}
       {{ .Values.networkPolicy.egress }}
     {{ end }}
