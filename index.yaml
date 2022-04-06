@@ -1,0 +1,16 @@
+apiVersion: v1
+entries:
+  routingservice:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-04-06T15:18:25.881106737Z"
+    description: A Helm chart for Kubernetes
+    digest: c35daeeac163e2586463585bdac0da478beabcb1cc43cbf2ad79cb57d12fcc7c
+    maintainers:
+    - name: me
+    name: routingservice
+    type: application
+    urls:
+    - https://github.com/andidroid/gorouting-gitops/releases/download/routingservice-0.1.0/routingservice-0.1.0.tgz
+    version: 0.1.0
+generated: "2022-04-06T15:18:25.881114537Z"
