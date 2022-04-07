@@ -1,0 +1,13 @@
+{{- define "servicelibrary.pdb.tpl" -}}
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: {{ include "servicelibrary.fullname" . }}
+  labels:
+    {{- include "servicelibrary.labels" . | nindent 4 }}
+spec:
+  minAvailable: {{ .Values.autoscaling.minReplicas }}
+  selector:
+    matchLabels:
+      {{- include "servicelibrary.selectorLabels" . | nindent 6 }}
+{{ end }}
