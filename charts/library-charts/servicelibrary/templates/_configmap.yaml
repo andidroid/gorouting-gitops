@@ -5,6 +5,7 @@ metadata:
   name: {{ include "servicelibrary.fullname" . }}
 data: {}
 {{- end -}}
-# {{- define "servicelibrary.configmap" -}}
-# {{- include "servicelibrary.configmap.tpl" -}}
-# {{- end -}}
+
+{{- define "servicelibrary.configmap" -}}
+{{- include "servicelibrary.util.merge" (append . "servicelibrary.configmap.tpl") -}}
+{{- end -}}

@@ -11,3 +11,7 @@ spec:
     matchLabels:
       {{- include "servicelibrary.selectorLabels" . | nindent 6 }}
 {{ end }}
+
+{{- define "servicelibrary.pdb" -}}
+{{- include "servicelibrary.util.merge" (append . "servicelibrary.pdb.tpl") -}}
+{{- end -}}
