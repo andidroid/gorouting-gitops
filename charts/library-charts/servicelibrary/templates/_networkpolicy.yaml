@@ -1,4 +1,5 @@
 {{- define "servicelibrary.networkpolicy.tpl" -}}
+{{- if .Values.networkPolicy.enabled -}}
 kind: NetworkPolicy
 apiVersion: networking.k8s.io/v1
 metadata:
@@ -15,8 +16,14 @@ spec:
     {{if has "ingress" .Values.networkPolicy.policyTypes }}
       {{ .Values.networkPolicy.ingress }}
     {{ end }}
+
   egress:
     {{if has "egress" .Values.networkPolicy.policyTypes }}
       {{ .Values.networkPolicy.egress }}
     {{ end }}
 {{ end }}
+{{ end }}
+
+{{- define "servicelibrary.networkpolicy" -}}
+{{- include "servicelibrary.util.merge" (append . "servicelibrary.networkpolicy.tpl") -}}
+{{- end -}}

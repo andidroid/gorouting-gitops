@@ -32,3 +32,7 @@ spec:
     {{- end }}
 {{- end }}
 {{- end }}
+
+{{- define "servicelibrary.hpa" -}}
+{{- include "servicelibrary.util.merge" (append . "servicelibrary.hpa.tpl") -}}
+{{- end -}}

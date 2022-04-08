@@ -45,3 +45,7 @@ spec:
     {{- end }}
 {{- end }}
 {{- end }}
+
+{{- define "servicelibrary.ingress" -}}
+{{- include "servicelibrary.util.merge" (append . "servicelibrary.ingress.tpl") -}}
+{{- end -}}
