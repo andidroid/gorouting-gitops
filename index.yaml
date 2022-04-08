@@ -1,6 +1,56 @@
 apiVersion: v1
 entries:
+  fleetservice:
+  - apiVersion: v2
+    appVersion: 0.0.1
+    created: "2022-04-08T20:51:13.086997841Z"
+    dependencies:
+    - name: servicelibrary
+      repository: file://../library-charts/servicelibrary
+      version: 0.1.0
+    description: A Helm chart for Kubernetes
+    digest: 074260f9207a507c9efcbdfd078cdd78e84871cbd36b88043cb32c911ceb986f
+    maintainers:
+    - name: me
+    name: fleetservice
+    type: application
+    urls:
+    - https://github.com/andidroid/gorouting-gitops/releases/download/fleetservice-0.2.0/fleetservice-0.2.0.tgz
+    version: 0.2.0
+  messagingservice:
+  - apiVersion: v2
+    appVersion: 0.0.1
+    created: "2022-04-08T20:51:13.206027947Z"
+    dependencies:
+    - name: servicelibrary
+      repository: file://../library-charts/servicelibrary
+      version: 0.1.0
+    description: A Helm chart for Kubernetes
+    digest: 808ef82ef87129c65986937b3921bb91db66fb8656c859ece9775ff510ccd966
+    maintainers:
+    - name: me
+    name: messagingservice
+    type: application
+    urls:
+    - https://github.com/andidroid/gorouting-gitops/releases/download/messagingservice-0.2.0/messagingservice-0.2.0.tgz
+    version: 0.2.0
   routingservice:
+  - apiVersion: v2
+    appVersion: 0.0.1
+    created: "2022-04-08T20:51:13.305649163Z"
+    dependencies:
+    - name: servicelibrary
+      repository: file://../library-charts/servicelibrary
+      version: 0.1.0
+    description: A Helm chart for Kubernetes
+    digest: 8454d28732c5eae40ce44a7aef70d04d907b9691385378f5423260600b3da091
+    maintainers:
+    - name: me
+    name: routingservice
+    type: application
+    urls:
+    - https://github.com/andidroid/gorouting-gitops/releases/download/routingservice-0.2.0/routingservice-0.2.0.tgz
+    version: 0.2.0
   - apiVersion: v2
     appVersion: 0.0.1
     created: "2022-04-07T18:51:40.826631901Z"
@@ -25,4 +75,21 @@ entries:
     urls:
     - https://github.com/andidroid/gorouting-gitops/releases/download/routingservice-0.1.0/routingservice-0.1.0.tgz
     version: 0.1.0
-generated: "2022-04-07T18:51:40.826656902Z"
+  searchservice:
+  - apiVersion: v2
+    appVersion: 0.0.1
+    created: "2022-04-08T20:51:13.409986398Z"
+    dependencies:
+    - name: servicelibrary
+      repository: file://../library-charts/servicelibrary
+      version: 0.1.0
+    description: A Helm chart for Kubernetes
+    digest: fb32595c70e2cf223547aab1376758227f001d9c133b5377b7e05ce23514a730
+    maintainers:
+    - name: me
+    name: searchservice
+    type: application
+    urls:
+    - https://github.com/andidroid/gorouting-gitops/releases/download/searchservice-0.2.0/searchservice-0.2.0.tgz
+    version: 0.2.0
+generated: "2022-04-08T20:51:13.410035599Z"
