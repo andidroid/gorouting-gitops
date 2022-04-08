@@ -1,0 +1,6 @@
+{{- include "servicelibrary.configmap.tpl" . -}}
+# { { - include "servicelibrary.configmap" (list . "chart.configmap") - } }
+# {{- define "chart.configmap" -}}
+# data:
+#   test: "Hello World"
+# {{- end -}}

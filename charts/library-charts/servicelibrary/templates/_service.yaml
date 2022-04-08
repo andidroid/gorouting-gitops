@@ -15,3 +15,7 @@ spec:
   selector:
     {{- include "servicelibrary.selectorLabels" . | nindent 4 }}
 {{- end }}
+
+{{- define "servicelibrary.service" -}}
+{{- include "servicelibrary.util.merge" (append . "servicelibrary.service.tpl") -}}
+{{- end -}}
