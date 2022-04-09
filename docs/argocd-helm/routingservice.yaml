@@ -1,0 +1,43 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: routingservice
+spec:
+  project: fleet
+  source:
+    repoURL: "https://andidroid.github.io/gorouting-gitops/"
+    targetRevision: 0.2.0
+    helm:
+      valueFiles:
+        - values.yaml
+      values: |
+        autoscaling:
+          enabled: false
+        env:
+          - name: OTEL_EXPORTER_JAEGER_ENDPOINT
+            value: "http://jaeger-collector-service.monitoring.svc.cluster.local:14268/api/traces"
+          - name: REDIS_HOST
+            value: "redis-service.redis.svc.cluster.local"
+          - name: MONGODB_HOST
+            value: "mongodb-service.mongodb.svc.cluster.local"
+          - name: POSTGRES_HOST
+            value: "pgrouting-service.pgrouting.svc.cluster.local"
+          - name: ROUTING_SERVCICE_HOST
+            value: "routing-service.argofleet.svc.cluster.local"
+          - name: SEARCH_SERVCICE_HOST
+            value: "search-service.argofleet.svc.cluster.local"
+          - name: FLEET_SERVCICE_HOST
+            value: "fleet-service.argofleet.svc.cluster.local"
+          - name: MESSAGING_SERVCICE_HOST
+            value: "messaging-service.argofleet.svc.cluster.local"
+    chart: routingservice
+  destination:
+    server: "https://kubernetes.default.svc"
+    namespace: argofleet
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+  revisionHistoryLimit: 2
