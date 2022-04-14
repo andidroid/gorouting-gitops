@@ -1,6 +1,6 @@
 dependencies:
-- name: servicelibrary
-  repository: file://../library-charts/servicelibrary
-  version: 0.1.0
+  - name: servicelibrary
+    repository: file://../library-charts/servicelibrary
+    version: 0.1.1
 digest: sha256:26b580558bab49a22ca40d21a99a267b0c323bd864d23e8f3e7dfdfa28df1590
 generated: "2022-04-07T22:34:08.9928673+02:00"
