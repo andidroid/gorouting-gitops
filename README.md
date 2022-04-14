@@ -25,3 +25,9 @@ helm install searchservice ./charts/searchservice/ --values env-values.yaml
 helm upgrade searchservice ./charts/searchservice/ --values env-values.yaml
 helm install messagingservice ./charts/messagingservice/ --values env-values.yaml
 helm upgrade messagingservice ./charts/messagingservice/ --values env-values.yaml
+
+
+helm dependency update ./charts/routingservice/
+helm dependency update ./charts/fleetservice/
+helm dependency update ./charts/searchservice/
+helm dependency update ./charts/messagingservice/
