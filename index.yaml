@@ -3,6 +3,22 @@ entries:
   fleetservice:
   - apiVersion: v2
     appVersion: 0.0.1
+    created: "2022-04-14T12:44:52.475095299Z"
+    dependencies:
+    - name: servicelibrary
+      repository: file://../library-charts/servicelibrary
+      version: 0.1.1
+    description: A Helm chart for Kubernetes
+    digest: 9b9c2bb327799c349c0c40a661ed79c03a14252eb1f02223a360a7aaab213bbc
+    maintainers:
+    - name: me
+    name: fleetservice
+    type: application
+    urls:
+    - https://github.com/andidroid/gorouting-gitops/releases/download/fleetservice-0.2.1/fleetservice-0.2.1.tgz
+    version: 0.2.1
+  - apiVersion: v2
+    appVersion: 0.0.1
     created: "2022-04-08T20:51:13.086997841Z"
     dependencies:
     - name: servicelibrary
@@ -20,6 +36,22 @@ entries:
   messagingservice:
   - apiVersion: v2
     appVersion: 0.0.1
+    created: "2022-04-14T12:44:52.580499008Z"
+    dependencies:
+    - name: servicelibrary
+      repository: file://../library-charts/servicelibrary
+      version: 0.1.1
+    description: A Helm chart for Kubernetes
+    digest: 3989f305b66c4f7de8d23e62aeb2b66301e1684106408ab96386f8132cc5c79a
+    maintainers:
+    - name: me
+    name: messagingservice
+    type: application
+    urls:
+    - https://github.com/andidroid/gorouting-gitops/releases/download/messagingservice-0.2.1/messagingservice-0.2.1.tgz
+    version: 0.2.1
+  - apiVersion: v2
+    appVersion: 0.0.1
     created: "2022-04-08T20:51:13.206027947Z"
     dependencies:
     - name: servicelibrary
@@ -35,6 +67,22 @@ entries:
     - https://github.com/andidroid/gorouting-gitops/releases/download/messagingservice-0.2.0/messagingservice-0.2.0.tgz
     version: 0.2.0
   routingservice:
+  - apiVersion: v2
+    appVersion: 0.0.1
+    created: "2022-04-14T12:44:52.701668168Z"
+    dependencies:
+    - name: servicelibrary
+      repository: file://../library-charts/servicelibrary
+      version: 0.1.1
+    description: A Helm chart for Kubernetes
+    digest: 2804fadaf5e7b081dcf4d5cf87e26e1a0f4d557208f49ada8b1dd4195f8b410d
+    maintainers:
+    - name: me
+    name: routingservice
+    type: application
+    urls:
+    - https://github.com/andidroid/gorouting-gitops/releases/download/routingservice-0.2.1/routingservice-0.2.1.tgz
+    version: 0.2.1
   - apiVersion: v2
     appVersion: 0.0.1
     created: "2022-04-08T20:51:13.305649163Z"
@@ -78,6 +126,22 @@ entries:
   searchservice:
   - apiVersion: v2
     appVersion: 0.0.1
+    created: "2022-04-14T12:44:52.819658797Z"
+    dependencies:
+    - name: servicelibrary
+      repository: file://../library-charts/servicelibrary
+      version: 0.1.1
+    description: A Helm chart for Kubernetes
+    digest: cf6e4178a05f31c523c35947c291584082c5d51cbecd03bafadd25a930f493cd
+    maintainers:
+    - name: me
+    name: searchservice
+    type: application
+    urls:
+    - https://github.com/andidroid/gorouting-gitops/releases/download/searchservice-0.2.1/searchservice-0.2.1.tgz
+    version: 0.2.1
+  - apiVersion: v2
+    appVersion: 0.0.1
     created: "2022-04-08T20:51:13.409986398Z"
     dependencies:
     - name: servicelibrary
@@ -92,4 +156,4 @@ entries:
     urls:
     - https://github.com/andidroid/gorouting-gitops/releases/download/searchservice-0.2.0/searchservice-0.2.0.tgz
     version: 0.2.0
-generated: "2022-04-08T20:51:13.410035599Z"
+generated: "2022-04-14T12:44:52.819698498Z"
