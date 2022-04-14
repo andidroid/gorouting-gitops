@@ -39,6 +39,12 @@ helm.sh/chart: {{ include "servicelibrary.chart" . }}
 {{- if .Chart.AppVersion }}
 app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
 {{- end }}
+{{- if .Values.PartOf }}
+app.kubernetes.io/part-of: {{ .Values.PartOf | quote }}
+{{- end }}
+{{- if .Values.Component }}
+app.kubernetes.io/component: {{ .Values.Component | quote }}
+{{- end }}
 app.kubernetes.io/managed-by: {{ .Release.Service }}
 {{- end }}
 
