@@ -1,23 +1,18 @@
 # Default values for searchservice.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
-
 replicaCount: 1
-
 image:
   repository: ghcr.io/andidroid/testgo/searchservice
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
-  tag: latest
-
+  tag: e21fe263ee2f1062f184340df5c6e89a911259c4
 imagePullSecrets: []
 # nameOverride: ""
 # fullnameOverride: ""
 component: backend
 partOf: fleet
-
 env: []
-
 serviceAccount:
   # Specifies whether a service account should be created
   create: true
@@ -26,29 +21,24 @@ serviceAccount:
   # The name of the service account to use.
   # If not set and create is true, a name is generated using the fullname template
   name: ""
-
 podAnnotations:
   prometheus.io/scrape: "true"
   prometheus.io/port: "80"
   prometheus.io/path: "/metrics"
+podSecurityContext: {}
+# fsGroup: 2000
 
-podSecurityContext:
-  {}
-  # fsGroup: 2000
-
-securityContext:
-  {}
-  # capabilities:
-  #   drop:
-  #   - ALL
-  # readOnlyRootFilesystem: true
-  # runAsNonRoot: true
-  # runAsUser: 1000
+securityContext: {}
+# capabilities:
+#   drop:
+#   - ALL
+# readOnlyRootFilesystem: true
+# runAsNonRoot: true
+# runAsUser: 1000
 
 service:
   type: ClusterIP
   port: 80
-
 ingress:
   enabled: true
   className: ""
@@ -65,7 +55,6 @@ ingress:
   #  - secretName: host.kubernetes.internal-tls
   #    hosts:
   #      - host.kubernetes.internal
-
 resources:
   limits:
     cpu: 100m
@@ -73,20 +62,15 @@ resources:
   requests:
     cpu: 25m
     memory: 32Mi
-
 autoscaling:
   enabled: true
   minReplicas: 1
   maxReplicas: 3
   targetCPUUtilizationPercentage: 75
   targetMemoryUtilizationPercentage: 75
-
 nodeSelector: {}
-
 tolerations: []
-
 affinity: {}
-
 networkPolicy:
   enabled: false
   policyTypes:
