@@ -50,3 +50,29 @@ jobs:
 
       - name: Run chart-testing (install)
         run: ct install
+
+  datree:
+    strategy:
+      fail-fast: false
+      matrix:
+        service:
+          - routingservice
+          - fleetservice
+          - searchservice
+          - messagingservice
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Run Datree Policy Check
+        uses: datreeio/action-datree@main
+        with:
+          path: 'charts/${{ matrix.service }}'
+          isHelmChart: true
+          cliArguments: '--schema-version 1.23.0'
+          helmArguments: '--values values.yaml'
+        env:
+          DATREE_TOKEN: ${{ secrets.DATREE_TOKEN }} 
