@@ -83,6 +83,6 @@ jobs:
           path: "charts/${{ matrix.service }}"
           isHelmChart: true
           cliArguments: "--schema-version 1.23.0"
-          helmArguments: "--values values.yaml"
+          helmArguments: "--values charts/${{ matrix.service }}/values.yaml"
         env:
           DATREE_TOKEN: ${{ secrets.DATREE_TOKEN }}
