@@ -76,6 +76,7 @@ jobs:
         run: |
           cd charts/${{ matrix.service }}
           helm dependency update .
+          helm template ${{ matrix.service }} .
 
       - name: Run Datree Policy Check
         uses: datreeio/action-datree@main
