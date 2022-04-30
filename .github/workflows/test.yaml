@@ -67,6 +67,16 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Set up Helm
+        uses: azure/setup-helm@v2.1
+        with:
+          version: v3.8.1
+
+      - name: build helm chart
+        run: |
+          cd charts/${{ matrix.service }}
+          helm dependency update .
+
       - name: Run Datree Policy Check
         uses: datreeio/action-datree@main
         with:
