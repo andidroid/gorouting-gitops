@@ -36,8 +36,10 @@ Common labels
 {{- define "servicelibrary.labels" -}}
 helm.sh/chart: {{ include "servicelibrary.chart" . }}
 {{ include "servicelibrary.selectorLabels" . }}
+app: {{ include "servicelibrary.name" . }}
 {{- if .Chart.AppVersion }}
 app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
+version: {{ .Chart.AppVersion | quote }}
 {{- end }}
 {{- if .Values.PartOf }}
 app.kubernetes.io/part-of: {{ .Values.PartOf | quote }}

@@ -15,3 +15,8 @@ env:
     value: "fleet-service.fleet.svc.cluster.local"
   - name: MESSAGING_SERVCICE_HOST
     value: "messaging-service.fleet.svc.cluster.local"
+
+ingress:
+  enabled: false
+autoscaling:
+  enabled: false

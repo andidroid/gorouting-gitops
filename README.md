@@ -15,8 +15,8 @@ $ helm dependency update .
 $ helm template test .
 $ helm lint .
 
-
-
+helm install ... -n fleet
+ 
 helm install routingservice ./charts/routingservice/ --values env-values.yaml
 helm upgrade routingservice ./charts/routingservice/ --values env-values.yaml
 helm install fleetservice ./charts/fleetservice/ --values env-values.yaml
@@ -31,3 +31,7 @@ helm dependency update ./charts/routingservice/
 helm dependency update ./charts/fleetservice/
 helm dependency update ./charts/searchservice/
 helm dependency update ./charts/messagingservice/
+
+## helm repo url
+helm repo add gorouting-gitops https://andidroid.github.io/gorouting-gitops
+https://andidroid.github.io/gorouting-gitops/index.yaml

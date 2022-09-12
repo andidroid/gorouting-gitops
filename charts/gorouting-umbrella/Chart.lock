@@ -1,0 +1,15 @@
+dependencies:
+- name: fleetservice
+  repository: https://andidroid.github.io/gorouting-gitops
+  version: 0.2.1
+- name: messagingservice
+  repository: https://andidroid.github.io/gorouting-gitops
+  version: 0.2.1
+- name: routingservice
+  repository: https://andidroid.github.io/gorouting-gitops
+  version: 0.2.1
+- name: searchservice
+  repository: https://andidroid.github.io/gorouting-gitops
+  version: 0.2.1
+digest: sha256:3cc6894dd91bdf1c23a3093c0765e1fd58bbb94facc5a3cc121b8dc0be65c2fb
+generated: "2022-09-12T18:45:26.5337687+02:00"
