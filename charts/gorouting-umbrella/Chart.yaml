@@ -26,18 +26,22 @@ appVersion: "1.16.0"
 # https://andidroid.github.io/gorouting-gitops/index.yaml
 dependencies:
   - name: fleetservice
-    repository: https://andidroid.github.io/gorouting-gitops
+    # repository: https://andidroid.github.io/gorouting-gitops
+    repository: "file://../fleetservice"
     version: 0.2.2
     alias: fleetservice
   - name: messagingservice
-    repository: https://andidroid.github.io/gorouting-gitops
+    # repository: https://andidroid.github.io/gorouting-gitops
+    repository: "file://../messagingservice"
     version: 0.2.2
     alias: messagingservice
   - name: routingservice
-    repository: https://andidroid.github.io/gorouting-gitops
+    # repository: https://andidroid.github.io/gorouting-gitops
+    repository: "file://../routingservice"
     version: 0.2.2
     alias: routingservice
   - name: searchservice
-    repository: https://andidroid.github.io/gorouting-gitops
+    # repository: https://andidroid.github.io/gorouting-gitops
+    repository: "file://../searchservice"
     version: 0.2.2
     alias: searchservice
