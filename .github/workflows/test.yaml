@@ -20,7 +20,7 @@ jobs:
       - name: Set up Helm
         uses: azure/setup-helm@v3.3
         with:
-          version: v3.9.2
+          version: v3.10.0
 
       - uses: actions/setup-python@v4.3.0
         with:
@@ -68,9 +68,9 @@ jobs:
           fetch-depth: 0
 
       - name: Set up Helm
-        uses: azure/setup-helm@v2.1
+        uses: azure/setup-helm@v3.3
         with:
-          version: v3.9.2
+          version: v3.10.0
 
       - name: build helm chart
         run: |
