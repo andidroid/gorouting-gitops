@@ -1,0 +1,15 @@
+dependencies:
+- name: fleetservice
+  repository: file://../fleetservice
+  version: 0.2.2
+- name: messagingservice
+  repository: file://../messagingservice
+  version: 0.2.2
+- name: routingservice
+  repository: file://../routingservice
+  version: 0.2.2
+- name: searchservice
+  repository: file://../searchservice
+  version: 0.2.2
+digest: sha256:e8b7d918db131a257c4a951ec0ac615f3b816997062db9f025b03fbb4397db07
+generated: "2022-10-13T19:24:21.4302309+02:00"

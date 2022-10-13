@@ -1,0 +1,22 @@
+env:
+  - name: OTEL_EXPORTER_JAEGER_ENDPOINT
+    value: "http://jaeger-collector-service.monitoring.svc.cluster.local:14268/api/traces"
+  - name: REDIS_HOST
+    value: "redis-service.redis.svc.cluster.local"
+  - name: MONGODB_HOST
+    value: "mongodb-service.mongodb.svc.cluster.local"
+  - name: POSTGRES_HOST
+    value: "pgrouting-service.pgrouting.svc.cluster.local"
+  - name: ROUTING_SERVCICE_HOST
+    value: "routing-service.fleet.svc.cluster.local"
+  - name: SEARCH_SERVCICE_HOST
+    value: "search-service.fleet.svc.cluster.local"
+  - name: FLEET_SERVCICE_HOST
+    value: "fleet-service.fleet.svc.cluster.local"
+  - name: MESSAGING_SERVCICE_HOST
+    value: "messaging-service.fleet.svc.cluster.local"
+
+ingress:
+  enabled: false
+autoscaling:
+  enabled: false

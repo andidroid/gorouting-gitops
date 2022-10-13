@@ -1,0 +1,21 @@
+{{- define "servicelibrary.service.tpl" -}}
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "servicelibrary.fullname" . }}
+  labels:
+    {{- include "servicelibrary.labels" . | nindent 4 }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    {{- include "servicelibrary.selectorLabels" . | nindent 4 }}
+{{- end }}
+
+{{- define "servicelibrary.service" -}}
+{{- include "servicelibrary.util.merge" (append . "servicelibrary.service.tpl") -}}
+{{- end -}}
