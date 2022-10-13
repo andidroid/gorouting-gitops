@@ -29,9 +29,6 @@ jobs:
       - name: Set up chart-testing
         uses: helm/chart-testing-action@v2.3.1
 
-      - name: Dependency Update
-        run: helm dependency update
-
       - name: Run chart-testing (list-changed)
         id: list-changed
         # ct list-changed --targer-branch $GITHUB_REF
