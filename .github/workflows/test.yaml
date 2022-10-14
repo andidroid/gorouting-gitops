@@ -87,3 +87,20 @@ jobs:
           helmArguments: "--values charts/${{ matrix.service }}/values.yaml"
         env:
           DATREE_TOKEN: ${{ secrets.DATREE_TOKEN }}
+          
+      - name: Run Trivy vulnerability scanner in IaC mode
+        uses: aquasecurity/trivy-action@master
+        with:
+          scan-type: 'config'
+          scan-ref: "charts/${{ matrix.service }}"
+          hide-progress: false
+          format: 'sarif'
+          output: 'trivy-results.sarif'
+          exit-code: '1'
+          ignore-unfixed: true
+          severity: 'CRITICAL,HIGH'
+
+      - name: Upload Trivy scan results to GitHub Security tab
+        uses: github/codeql-action/upload-sarif@v2
+        with:
+          sarif_file: 'trivy-results.sarif'
