@@ -13,7 +13,7 @@ type: application
 # This is the chart version. This version number should be incremented each time you make changes
 # to the chart and its templates, including the app version.
 # Versions are expected to follow Semantic Versioning (https://semver.org/)
-version: ebd35224ed056680c9329c5531f8e11e6e2c94d0
+version: fa87c2c1a533b418bea1b85d1c7fb6f54c866272
 # This is the version number of the application being deployed. This version number should be
 # incremented each time you make changes to the application. Versions are not expected to
 # follow Semantic Versioning. They should reflect the version the application is using.
