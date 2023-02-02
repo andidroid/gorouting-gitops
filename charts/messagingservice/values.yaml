@@ -6,7 +6,7 @@ image:
   repository: ghcr.io/andidroid/testgo/messagingservice
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
-  tag: 388827062341e2434b4c53a32ef44afc792861cc
+  tag: e1fa4b7a15bd1bc45c74712cf3eddee855ba1f30
 imagePullSecrets: []
 # nameOverride: ""
 # fullnameOverride: ""
