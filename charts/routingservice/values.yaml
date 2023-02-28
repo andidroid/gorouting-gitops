@@ -6,7 +6,7 @@ image:
   repository: ghcr.io/andidroid/testgo/routingservice
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
-  tag: a46706b93fcf132f6b48c337f78106cc3edf4a41
+  tag: ac1ccd0bf290e1a9c79527af452c5ab9fde7ae1f
 imagePullSecrets: []
 # nameOverride: ""
 # fullnameOverride: ""
