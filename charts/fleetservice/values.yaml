@@ -6,7 +6,7 @@ image:
   repository: ghcr.io/andidroid/testgo/fleetservice
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
-  tag: 9ed448c56d7855cff83172a41ce46cffe59e51c3
+  tag: 354d0d13b16c83f477b853be64774c1859f2f3a8
 imagePullSecrets: []
 # nameOverride: ""
 # fullnameOverride: ""
